@@ -1,0 +1,7 @@
+main: fr.azrotho.druhc.Main
+version: 1.0
+name: DanganronpaUHC
+commands:
+  start:
+    description: Permet de lancer la partie
+    usage: ~~Je suis un Message Inutile~~

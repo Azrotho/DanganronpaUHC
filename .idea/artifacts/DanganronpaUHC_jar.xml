@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" build-on-make="true" name="DanganronpaUHC:jar">
+    <output-path>E:/Azrotho/Plugins</output-path>
+    <root id="archive" name="DanganronpaUHC.jar">
+      <element id="module-output" name="DanganronpaUHC" />
+    </root>
+  </artifact>
+</component>
