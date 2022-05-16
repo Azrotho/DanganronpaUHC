@@ -5,3 +5,6 @@ commands:
   start:
     description: Permet de lancer la partie
     usage: ~~Je suis un Message Inutile~~
+  dr:
+    description: Permet d'utiliser les Pouvoirs!
+    usage: ~~Je suis un Message Inutile~~

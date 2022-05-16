@@ -1,8 +1,10 @@
 package fr.azrotho.druhc;
 
+import fr.azrotho.druhc.Commands.StartCommand;
 import org.bukkit.plugin.java.JavaPlugin;
 
 import java.util.HashMap;
+import java.util.Objects;
 import java.util.UUID;
 
 public class Main extends JavaPlugin {
@@ -15,10 +17,11 @@ public class Main extends JavaPlugin {
 
     @Override
     public void onEnable() {
-    roles = new HashMap<>();
-    camp = new HashMap<>();
-    rolesreverse = new HashMap<>();
-    campreverse = new HashMap<>();
+        Objects.requireNonNull(this.getCommand("start")).setExecutor(new StartCommand());
+        roles = new HashMap<>();
+        camp = new HashMap<>();
+        rolesreverse = new HashMap<>();
+        campreverse = new HashMap<>();
     }
 
     public static HashMap<UUID, String> getRoles() { return roles; }
