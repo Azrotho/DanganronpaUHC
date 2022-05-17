@@ -12,6 +12,8 @@ import java.util.*;
 
 public class StartCommand implements CommandExecutor {
 
+    //Mets des Breaks Lol, et mettre le defroles après dans une autre boucle.
+    
     @Override
     public boolean onCommand(CommandSender commandSender, Command command, String s, String[] strings) {
 
@@ -142,6 +144,7 @@ public class StartCommand implements CommandExecutor {
                 p.sendMessage("§b§lVous êtes Sakura, Ultime Combattante, Vous devez éliminer Monokuma, Vous disposez de l'effet Force et vous connaissez Aoi");
                 UUID AoUUID = Main.getRolesreverse().get("Aoi");
                 Player Aoi = Bukkit.getPlayer(AoUUID);
+                // Pseudo Aoi
             case 8:
                 p.sendMessage("§b§lVous êtes Aoi, Ultime Nageuse, Vous devez éliminer Monokuma, Vous disposez de l'effet Speed I et un Livre Depth Strider 3, Vous connaissez Sakura");
                 UUID SakuUUID = Main.getRolesreverse().get("Sakura");
