@@ -1,6 +1,7 @@
 package fr.azrotho.druhc;
 
 import fr.azrotho.druhc.Commands.StartCommand;
+import fr.azrotho.druhc.Commands.drCommand;
 import org.bukkit.plugin.java.JavaPlugin;
 
 import java.util.HashMap;
@@ -8,6 +9,8 @@ import java.util.Objects;
 import java.util.UUID;
 
 public class Main extends JavaPlugin {
+
+    public static Main INSTANCE;
     private static HashMap<UUID, String> roles;
 
     private static HashMap<String, UUID> rolesreverse;
@@ -17,7 +20,9 @@ public class Main extends JavaPlugin {
 
     @Override
     public void onEnable() {
-        Objects.requireNonNull(this.getCommand("start")).setExecutor(new StartCommand());
+        INSTANCE = this;
+        Objects.requireNonNull(this.getCommand("start")).setExecutor(new StartCommand(this));
+        Objects.requireNonNull(this.getCommand("dr")).setExecutor(new drCommand());
         roles = new HashMap<>();
         camp = new HashMap<>();
         rolesreverse = new HashMap<>();
