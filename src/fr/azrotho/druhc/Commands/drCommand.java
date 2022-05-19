@@ -16,6 +16,9 @@ public class drCommand implements CommandExecutor {
                 // do something
             case "infect":
                 // do something
+            case "role":
+            case "me":
+
 
             default:
                 player.sendMessage("§c§lFaites /dr help pour avoir des Informations");
