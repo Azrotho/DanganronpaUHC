@@ -1,11 +1,10 @@
 package fr.azrotho.druhc;
 
 import fr.azrotho.druhc.Commands.StartCommand;
-import fr.azrotho.druhc.Commands.drCommand;
+import fr.azrotho.druhc.Commands.DrCommand;
 import fr.azrotho.druhc.listeners.HasteyBoy;
-import fr.azrotho.druhc.listeners.onDeath;
+import fr.azrotho.druhc.listeners.OnDeath;
 import org.bukkit.Bukkit;
-import org.bukkit.plugin.PluginManager;
 import org.bukkit.plugin.java.JavaPlugin;
 
 import java.util.HashMap;
@@ -26,8 +25,8 @@ public class Main extends JavaPlugin {
     public void onEnable() {
         INSTANCE = this;
         Objects.requireNonNull(this.getCommand("start")).setExecutor(new StartCommand(this));
-        Objects.requireNonNull(this.getCommand("dr")).setExecutor(new drCommand());
-        Bukkit.getServer().getPluginManager().registerEvents(new onDeath(), this);
+        Objects.requireNonNull(this.getCommand("dr")).setExecutor(new DrCommand());
+        Bukkit.getServer().getPluginManager().registerEvents(new OnDeath(), this);
         Bukkit.getServer().getPluginManager().registerEvents(new HasteyBoy(), this);
         roles = new HashMap<>();
         camp = new HashMap<>();
